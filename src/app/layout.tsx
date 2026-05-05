@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Clarity } from "@/components/Clarity";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 
 export default function RootLayout({
   children,
@@ -25,6 +27,7 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-50 text-slate-800 antialiased">{children}</body>
       {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
+      {CLARITY_ID && <Clarity projectId={CLARITY_ID} />}
     </html>
   );
 }
