@@ -1,68 +1,18 @@
-// Single-page resume rendering matching the layout of
-// public/Zach_Sparkman_Resume.pdf as closely as the web allows.
 "use client";
 
-import posthog from "posthog-js";
+import { PageShell } from "@/components/PageShell";
 
 const NAVY = "text-[#1F3A5F]";
 
 export default function HomePage() {
   return (
-    <main className="mx-auto min-h-screen max-w-[880px] bg-white px-8 py-12 text-[15px] leading-[1.5] text-slate-800 shadow-sm sm:px-12 sm:py-14 print:shadow-none">
-      <Header />
+    <PageShell activeTab="resume">
       <Summary />
       <ProfessionalExperience />
-      <ProductPortfolio />
       <EducationAndCertifications />
       <Skills />
-    </main>
+    </PageShell>
   );
-}
-
-function Header() {
-  return (
-    <header className="mb-7 border-b border-slate-300 pb-5 text-center">
-      <h1 className={`${NAVY} text-[34px] font-bold uppercase tracking-[0.04em]`}>
-        Zachary E. Sparkman
-      </h1>
-      <p className="mt-2 text-[14px] text-slate-600">
-        Los Angeles, CA
-        <Sep />
-        <a
-          href="mailto:zesparkman@gmail.com"
-          className="text-slate-600 hover:text-[#1F3A5F]"
-          onClick={() => posthog.capture("email_clicked")}
-        >
-          zesparkman@gmail.com
-        </a>
-        <Sep />
-        <a
-          href="https://linkedin.com/in/zachsparkman"
-          className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => posthog.capture("linkedin_clicked")}
-        >
-          linkedin.com/in/zachsparkman
-        </a>
-      </p>
-      <div className="no-print mt-4 flex justify-center">
-        <a
-          href="/Zach_Sparkman_Resume.pdf"
-          className="inline-flex items-center gap-2 rounded border border-slate-300 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 shadow-sm hover:border-slate-400 hover:text-slate-900"
-          download
-          onClick={() => posthog.capture("resume_downloaded")}
-        >
-          <DownloadIcon />
-          Download PDF
-        </a>
-      </div>
-    </header>
-  );
-}
-
-function Sep() {
-  return <span className="mx-2 text-slate-400">•</span>;
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -169,77 +119,6 @@ function ProfessionalExperience() {
   );
 }
 
-interface ProjectProps {
-  name: string;
-  link?: { label: string; href: string };
-  tag: string;
-  subtitle: string;
-  bullets: string[];
-}
-
-function Project({ name, link, tag, subtitle, bullets }: ProjectProps) {
-  return (
-    <article className="mt-4 first:mt-0">
-      <h3 className={`${NAVY} text-[15px] font-bold`}>
-        {name}
-        {link && (
-          <>
-            <span className="mx-1.5 font-normal text-slate-400">|</span>
-            <a
-              href={link.href}
-              className="font-bold text-blue-700 underline underline-offset-2 hover:text-blue-900"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => posthog.capture("project_link_clicked", { project: name, label: link.label, href: link.href })}
-            >
-              {link.label}
-            </a>
-          </>
-        )}
-        {!link && tag && (
-          <>
-            <span className="mx-1.5 font-normal text-slate-400">|</span>
-            <span className={`${NAVY} font-bold`}>{tag}</span>
-          </>
-        )}
-      </h3>
-      <p className="mt-0.5 text-[14px] italic text-slate-600">{subtitle}</p>
-      <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5 marker:text-slate-400">
-        {bullets.map((b, i) => (
-          <li key={i}>{b}</li>
-        ))}
-      </ul>
-    </article>
-  );
-}
-
-function ProductPortfolio() {
-  return (
-    <Section title="Product Portfolio">
-      <Project
-        name="Political Window"
-        link={{ label: "PoliticalWindow.com", href: "https://politicalwindow.com" }}
-        tag=""
-        subtitle="Political advertising intelligence platform • Solo founder & developer"
-        bullets={[
-          "Designed and built a full-stack web application that parses FCC public file PDFs into structured data, enabling political media buyers to identify Lowest Unit Rate violations, track candidate ad spending, and navigate FCC compliance windows across all 210 U.S. DMAs",
-          "Architecture: Neon PostgreSQL → Express/Node.js API (Railway) → JavaScript frontend (GitHub Pages) with Claude Sonnet-powered PDF extraction pipeline, JWT/bcrypt authentication, and FEC + FollowTheMoney API integrations",
-          "Features include a 50-state interactive election map with FCC window countdowns, an FCC rate explorer, LUR violation detection engine (the platform’s core strategic differentiator), and a multi-source candidate ad spend tracker",
-        ]}
-      />
-      <Project
-        name="Live Sports CTV Package Platform"
-        tag="Internal Tool • Spectrum Reach"
-        subtitle="Sales enablement product for streaming ad packages • Sole developer"
-        bullets={[
-          "Built a single-file web application that calculates streaming ad packages for sales reps based on live sports event, DMA, budget, and rate class inputs, then auto-generates branded PowerPoint decks via embedded PPTX templates and SharePoint REST API sync",
-          "Eliminated manual package assembly workflow for 50+ reps across 10+ sports properties, reducing proposal turnaround from hours to minutes while enforcing pricing accuracy and brand consistency",
-        ]}
-      />
-    </Section>
-  );
-}
-
 interface CertProps {
   title: string;
   org: string;
@@ -318,24 +197,5 @@ function Skills() {
         />
       </ul>
     </Section>
-  );
-}
-
-function DownloadIcon() {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="size-3.5"
-    >
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <polyline points="7 10 12 15 17 10" />
-      <line x1="12" y1="15" x2="12" y2="3" />
-    </svg>
   );
 }
