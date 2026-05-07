@@ -1,5 +1,8 @@
 // Single-page resume rendering matching the layout of
 // public/Zach_Sparkman_Resume.pdf as closely as the web allows.
+"use client";
+
+import posthog from "posthog-js";
 
 const NAVY = "text-[#1F3A5F]";
 
@@ -28,6 +31,7 @@ function Header() {
         <a
           href="mailto:zesparkman@gmail.com"
           className="text-slate-600 hover:text-[#1F3A5F]"
+          onClick={() => posthog.capture("email_clicked")}
         >
           zesparkman@gmail.com
         </a>
@@ -37,6 +41,7 @@ function Header() {
           className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => posthog.capture("linkedin_clicked")}
         >
           linkedin.com/in/zachsparkman
         </a>
@@ -46,6 +51,7 @@ function Header() {
           href="/Zach_Sparkman_Resume.pdf"
           className="inline-flex items-center gap-2 rounded border border-slate-300 bg-white px-3 py-1.5 text-[13px] font-medium text-slate-700 shadow-sm hover:border-slate-400 hover:text-slate-900"
           download
+          onClick={() => posthog.capture("resume_downloaded")}
         >
           <DownloadIcon />
           Download PDF
@@ -184,6 +190,7 @@ function Project({ name, link, tag, subtitle, bullets }: ProjectProps) {
               className="font-bold text-blue-700 underline underline-offset-2 hover:text-blue-900"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => posthog.capture("project_link_clicked", { project: name, label: link.label, href: link.href })}
             >
               {link.label}
             </a>
