@@ -40,7 +40,7 @@ function Project({ name, tag, link, subtitle, bullets }: ProjectProps) {
         {tag && (
           <>
             <span className="mx-1.5 font-normal text-slate-400">|</span>
-            <span className={`${NAVY} font-bold`}>{tag}</span>
+            <span className={`${NAVY} font-normal`}>{tag}</span>
           </>
         )}
         {link && (
@@ -79,8 +79,9 @@ function ProductPortfolio() {
     <Section title="Product Portfolio">
       <Project
         name="Political Window"
+        tag="Sole Founder & Developer"
         link={{ label: "PoliticalWindow.com", href: "https://politicalwindow.com" }}
-        subtitle="Political advertising intelligence platform • Solo founder & developer"
+        subtitle="Political advertising intelligence platform"
         bullets={[
           "Designed and built a full-stack web application that parses FCC public file PDFs into structured data, enabling political media buyers to identify Lowest Unit Rate violations, track candidate ad spending, and navigate FCC compliance windows across all 210 U.S. DMAs",
           "Architecture: Neon PostgreSQL → Express/Node.js API (Railway) → JavaScript frontend (GitHub Pages) with Claude Sonnet-powered PDF extraction pipeline, JWT/bcrypt authentication, and FEC + FollowTheMoney API integrations",
@@ -89,12 +90,12 @@ function ProductPortfolio() {
       />
       <Project
         name="Live Sports CTV Package Platform"
-        tag="Spectrum Reach"
+        tag="Solo Build @ Spectrum Reach"
         link={{
-          label: "Demo: ctv-builder.zachsparkman.com",
+          label: "CTV-Builder.ZachSparkman.com",
           href: "https://ctv-builder.zachsparkman.com",
         }}
-        subtitle="Sales enablement product for streaming ad packages • Sole developer"
+        subtitle="Sales enablement product for streaming ad packages"
         bullets={[
           "Designed and built a Next.js web application that calculates streaming ad packages for live sports inventory, enabling 50+ sales reps across 10+ properties to configure rate-class, DMA, date window, and budget inputs and produce branded proposal decks in under a minute",
           "Architecture: Next.js single-page application with embedded PPTX template engine, dynamic xlsx data ingestion (packages, dates, live CPMs, DMAs, max live impressions), client-side PowerPoint generation via JSZip, and SharePoint REST API sync for centralized asset distribution",
@@ -103,12 +104,12 @@ function ProductPortfolio() {
       />
       <Project
         name="RSN Yield Platform"
-        tag="Spectrum Reach"
+        tag="Solo Build @ Spectrum Reach"
         link={{
-          label: "Demo: rsn-yield.zachsparkman.com",
+          label: "RSN-Yield.ZachSparkman.com",
           href: "https://rsn-yield.zachsparkman.com",
         }}
-        subtitle="Inventory, rate, and yield management platform for live sports RSNs • Sole developer"
+        subtitle="Inventory, rate, and yield management platform for live sports RSNs"
         bullets={[
           "Designed and built a Next.js web application that consolidates booked spots, schedules, and inventory data into a unified decision-support layer used daily by yield, sales, and revenue assurance teams to manage allocation across $57MM in annual ad revenue for the Lakers and Dodgers RSNs",
           "Architecture: Next.js single-page application with a server-driven data layer feeding a six-view product framework — Inventory, Rates, Heatmap, Booking Matrix, Yield Summary, and About — covering every angle of yield decisioning from per-game capacity to portfolio-level revenue decomposition",
