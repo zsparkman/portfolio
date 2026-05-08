@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 html, body {
-  font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-mont {
+  font-family: var(--font-montserrat), var(--font-inter), ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 @media print {
