@@ -3,19 +3,15 @@
 import Link from "next/link";
 import posthog from "posthog-js";
 
-const INDIGO = "#4F46E5";
+const NAVY = "#1F3A5F";
 
 type Tab = "resume" | "portfolio";
 
-const btnBase =
-  "inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-[13px] font-semibold transition";
-
-// Solid indigo, white text — current page indicator
-const btnActive = "bg-[#4F46E5] text-white shadow-sm hover:bg-[#4338CA]";
-
-// Translucent indigo tint — inactive tab + download button
-const btnSoft =
-  "bg-[rgba(79,70,229,0.08)] text-[#4F46E5] hover:bg-[rgba(79,70,229,0.16)]";
+const tabBase =
+  "inline-flex items-center justify-center gap-2 rounded border px-3 py-1.5 text-[13px] font-medium shadow-sm transition";
+const tabInactive =
+  "border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:text-slate-900";
+const tabActive = "border-[#1F3A5F] bg-[#1F3A5F] text-white";
 
 export function PageShell({
   activeTab,
@@ -25,19 +21,20 @@ export function PageShell({
   children: React.ReactNode;
 }) {
   return (
-    <main className="mx-auto min-h-screen max-w-[880px] bg-white px-8 py-12 text-[15px] leading-[1.6] text-slate-800 shadow-sm sm:px-12 sm:py-14 print:shadow-none">
-      <header className="mb-8 border-b border-slate-200 pb-6 text-center">
+    <main className="mx-auto min-h-screen max-w-[880px] bg-white px-8 py-12 text-[15px] leading-[1.5] text-slate-800 shadow-sm sm:px-12 sm:py-14 print:shadow-none">
+      <header className="mb-7 border-b border-slate-300 pb-5 text-center">
         <h1
-          className="font-mont text-[32px] font-extrabold uppercase tracking-[0.04em] text-slate-900"
+          className="text-[34px] font-bold uppercase tracking-[0.04em]"
+          style={{ color: NAVY }}
         >
           Zachary E. Sparkman
         </h1>
-        <p className="mt-2 text-[14px] text-slate-500">
+        <p className="mt-2 text-[14px] text-slate-600">
           Los Angeles, CA
           <Sep />
           <a
             href="mailto:zesparkman@gmail.com"
-            className="text-slate-500 hover:text-[#4F46E5]"
+            className="text-slate-600 hover:text-[#1F3A5F]"
             onClick={() => posthog.capture("email_clicked")}
           >
             zesparkman@gmail.com
@@ -45,7 +42,7 @@ export function PageShell({
           <Sep />
           <a
             href="https://linkedin.com/in/zachsparkman"
-            className="text-[#4F46E5] underline underline-offset-2 hover:text-[#4338CA]"
+            className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => posthog.capture("linkedin_clicked")}
@@ -53,24 +50,24 @@ export function PageShell({
             linkedin.com/in/zachsparkman
           </a>
         </p>
-        <div className="no-print mt-5 grid grid-cols-3 gap-2.5">
+        <div className="no-print mt-4 grid grid-cols-3 gap-2">
           <Link
             href="/"
-            className={`${btnBase} ${activeTab === "resume" ? btnActive : btnSoft}`}
+            className={`${tabBase} ${activeTab === "resume" ? tabActive : tabInactive}`}
             onClick={() => posthog.capture("tab_clicked", { tab: "resume" })}
           >
             Resume
           </Link>
           <Link
             href="/portfolio"
-            className={`${btnBase} ${activeTab === "portfolio" ? btnActive : btnSoft}`}
+            className={`${tabBase} ${activeTab === "portfolio" ? tabActive : tabInactive}`}
             onClick={() => posthog.capture("tab_clicked", { tab: "portfolio" })}
           >
             Portfolio
           </Link>
           <a
             href="/Zach_Sparkman_Resume.pdf"
-            className={`${btnBase} ${btnSoft}`}
+            className={`${tabBase} ${tabInactive}`}
             download
             onClick={() => posthog.capture("resume_downloaded")}
           >
@@ -85,7 +82,7 @@ export function PageShell({
 }
 
 function Sep() {
-  return <span className="mx-2 text-slate-300">•</span>;
+  return <span className="mx-2 text-slate-400">•</span>;
 }
 
 function DownloadIcon() {
