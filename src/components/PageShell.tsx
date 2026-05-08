@@ -8,7 +8,7 @@ const NAVY = "#1F3A5F";
 type Tab = "resume" | "portfolio";
 
 const tabBase =
-  "inline-flex items-center justify-center gap-2 rounded border px-3 py-1.5 text-[13px] font-medium shadow-sm transition";
+  "inline-flex items-center justify-center gap-2 rounded-md border px-3 py-1.5 text-[13px] font-medium shadow-sm transition";
 const tabInactive =
   "border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:text-slate-900";
 const tabActive = "border-[#1F3A5F] bg-[#1F3A5F] text-white";
