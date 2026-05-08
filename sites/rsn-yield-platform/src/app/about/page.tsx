@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <article className="prose mx-auto max-w-3xl space-y-8 py-4">
       <header>
-        <h1 className="text-3xl font-semibold tracking-tight text-slate-900">
+        <h1 className="font-serif text-3xl font-bold tracking-tight text-slate-900">
           About this demo
         </h1>
         <p className="mt-2 text-sm text-slate-600">
@@ -89,7 +89,7 @@ export default function AboutPage() {
         <p>
           <Link
             href="https://github.com/zsparkman/rsn-yield-platform"
-            className="text-indigo-600 hover:underline"
+            className="text-[#1F3A5F] hover:underline"
           >
             Source on GitHub
           </Link>

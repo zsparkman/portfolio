@@ -225,7 +225,7 @@ export function YieldSummaryTable({ rows }: { rows: AurSummaryRow[] }) {
       </div>
 
       {legendOpen && (
-        <div className="rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 text-xs leading-relaxed text-slate-600 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+        <div className="rounded-md border border-[#E5E7EB] bg-white px-4 py-3 text-xs leading-relaxed text-slate-600 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
           <div className="flex items-start justify-between gap-4">
             <div className="space-y-1">
               <p>
@@ -293,7 +293,7 @@ export function YieldSummaryTable({ rows }: { rows: AurSummaryRow[] }) {
         </span>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-[#E5E7EB] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+      <div className="overflow-x-auto rounded-md border border-[#E5E7EB] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
         <table className="grid-table w-full text-[13px] leading-tight">
           <thead className="border-b border-slate-200 bg-slate-50 text-left text-xs font-medium uppercase tracking-wide text-slate-500">
             <tr>
@@ -319,7 +319,7 @@ export function YieldSummaryTable({ rows }: { rows: AurSummaryRow[] }) {
             {groupedByMonth.map((m) => (
               <MonthBlock key={m.month} month={m} />
             ))}
-            <tr className="border-y-2 border-slate-400 bg-indigo-50 font-semibold text-slate-800">
+            <tr className="border-y-2 border-slate-400 bg-[rgba(31,58,95,0.08)] font-semibold text-slate-800">
               <td colSpan={4} className="px-3 py-2 uppercase tracking-wide text-xs">
                 Season-to-date · {phase === "All" ? "PR + REG" : phase}
               </td>

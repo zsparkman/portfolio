@@ -59,8 +59,8 @@ export function TopNav() {
                   className={clsx(
                     "-mb-[2px] inline-block border-b-2 pb-1 text-[11px] font-bold uppercase tracking-[0.12em] transition-colors",
                     active
-                      ? "border-indigo-600 text-slate-900"
-                      : "border-transparent text-slate-500 hover:text-indigo-600",
+                      ? "border-[#1F3A5F] text-slate-900"
+                      : "border-transparent text-slate-500 hover:text-[#1F3A5F]",
                   )}
                 >
                   {v.label}
@@ -76,8 +76,8 @@ export function TopNav() {
             className={clsx(
               "-mb-[2px] inline-block border-b-2 pb-1 text-[11px] font-bold uppercase tracking-[0.12em] transition-colors",
               isActive("/about")
-                ? "border-indigo-600 text-slate-900"
-                : "border-transparent text-slate-500 hover:text-indigo-600",
+                ? "border-[#1F3A5F] text-slate-900"
+                : "border-transparent text-slate-500 hover:text-[#1F3A5F]",
             )}
           >
             About

@@ -24,7 +24,7 @@ export function PageShell({
     <main className="mx-auto min-h-screen max-w-[880px] bg-white px-8 py-12 text-[15px] leading-[1.5] text-slate-800 shadow-sm sm:px-12 sm:py-14 print:shadow-none">
       <header className="mb-7 border-b border-slate-300 pb-5 text-center">
         <h1
-          className="text-[34px] font-bold uppercase tracking-[0.04em]"
+          className="font-serif text-[36px] font-bold tracking-[0.01em]"
           style={{ color: NAVY }}
         >
           Zachary E. Sparkman

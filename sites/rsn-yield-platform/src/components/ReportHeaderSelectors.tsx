@@ -64,7 +64,7 @@ function Selector<T extends string>({ label, value, options, onChange }: Selecto
         <span className="border-b border-dotted border-slate-700">{current}</span>
         <ChevronDown className="text-slate-400" />
       </summary>
-      <div className="absolute right-0 top-full z-30 mt-1 min-w-[8rem] overflow-hidden rounded-lg border border-[#E5E7EB] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+      <div className="absolute right-0 top-full z-30 mt-1 min-w-[8rem] overflow-hidden rounded-md border border-[#E5E7EB] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
         {options.map((o) => (
           <button
             key={o.value}
@@ -76,7 +76,7 @@ function Selector<T extends string>({ label, value, options, onChange }: Selecto
             className={clsx(
               "block w-full px-3 py-1.5 text-left text-sm",
               o.value === value
-                ? "bg-indigo-50 font-medium text-indigo-700"
+                ? "bg-[rgba(31,58,95,0.08)] font-medium text-[#1F3A5F]"
                 : "text-slate-700 hover:bg-slate-50",
             )}
           >

@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 80" role="img" aria-label="RSN Yield Platform">
-  <!-- Indigo accent square with ascending yield bars -->
-  <rect x="4" y="14" width="52" height="52" fill="#4F46E5" rx="3"/>
-  <rect x="14" y="48" width="5" height="8"  fill="#FFFFFF" rx="1"/>
-  <rect x="23" y="40" width="5" height="16" fill="#FFFFFF" rx="1"/>
-  <rect x="32" y="32" width="5" height="24" fill="#FFFFFF" rx="1"/>
-  <rect x="41" y="24" width="5" height="32" fill="#FFFFFF" rx="1"/>
-  <!-- Wordmark -->
-  <text x="74" y="42" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#0F172A" letter-spacing="-0.4">RSN Yield Platform</text>
-  <text x="74" y="62" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#64748B" letter-spacing="0.2">Yield Management &#8226; Regional Sports Network</text>
+  <!-- Navy mark: ascending yield bars on a 6px-radius square -->
+  <rect x="4" y="14" width="52" height="52" fill="#1F3A5F" rx="6"/>
+  <rect x="13" y="48" width="6" height="8"  fill="#FFFFFF" rx="1"/>
+  <rect x="22" y="40" width="6" height="16" fill="#FFFFFF" rx="1"/>
+  <rect x="31" y="32" width="6" height="24" fill="#FFFFFF" rx="1"/>
+  <rect x="40" y="22" width="6" height="34" fill="#FFFFFF" rx="1"/>
+  <!-- Wordmark — serif headline, sans subtitle -->
+  <text x="74" y="44" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="#1F3A5F" letter-spacing="-0.4">RSN Yield Platform</text>
+  <text x="74" y="64" font-family="'Source Sans 3', -apple-system, sans-serif" font-size="13" font-weight="500" fill="#64748B" letter-spacing="0.2">Yield Management &#8226; Regional Sports Network</text>
 </svg>
