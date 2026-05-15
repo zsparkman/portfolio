@@ -30,7 +30,7 @@ export function PageShell({
           Zachary E. Sparkman
         </h1>
         <p className="mt-2 text-[14px] text-slate-600">
-          Los Angeles, CA
+          Santa Monica, CA
           <Sep />
           <a
             href="mailto:zesparkman@gmail.com"
@@ -41,13 +41,23 @@ export function PageShell({
           </a>
           <Sep />
           <a
-            href="https://linkedin.com/in/zachsparkman"
+            href="tel:+13104963376"
+            className="text-slate-600 hover:text-[#1F3A5F]"
+            onClick={() => posthog.capture("phone_clicked")}
+          >
+            (310) 496-3376
+          </a>
+          <Sep />
+          ZachSparkman.com
+          <Sep />
+          <a
+            href="https://linkedin.com/in/zsparkman"
             className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => posthog.capture("linkedin_clicked")}
           >
-            linkedin.com/in/zachsparkman
+            linkedin.com/in/zsparkman
           </a>
         </p>
         <div className="no-print mt-4 grid grid-cols-3 gap-2">

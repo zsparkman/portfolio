@@ -83,7 +83,7 @@ function ProductPortfolio() {
         link={{ label: "PoliticalWindow.com", href: "https://politicalwindow.com" }}
         subtitle="Political advertising intelligence platform"
         bullets={[
-          "Designed and built a full-stack web application that parses FCC public file PDFs into structured data, enabling political media buyers to identify Lowest Unit Rate violations, track candidate ad spending, and navigate FCC compliance windows across all 210 U.S. DMAs",
+          "Designed and built a full-stack web application that parses FCC public file PDFs into structured data, enabling political media buyers to identify LUR violations, track candidate ad spend, and navigate FCC compliance windows across all 210 U.S. DMAs",
           "Architecture: Neon PostgreSQL → Express/Node.js API (Railway) → JavaScript frontend (GitHub Pages) with Claude Sonnet-powered PDF extraction pipeline, JWT/bcrypt authentication, and FEC + FollowTheMoney API integrations",
           "Features include a 50-state interactive election map with FCC window countdowns, an FCC rate explorer, LUR violation detection engine (the platform’s core strategic differentiator), and a multi-source candidate ad spend tracker",
         ]}
@@ -97,9 +97,9 @@ function ProductPortfolio() {
         }}
         subtitle="Sales enablement product for streaming ad packages"
         bullets={[
-          "Designed and built a Next.js web application that calculates streaming ad packages for live sports inventory, enabling 50+ sales reps across 10+ properties to configure rate-class, DMA, date window, and budget inputs and produce branded proposal decks in under a minute",
-          "Architecture: Next.js single-page application with embedded PPTX template engine, dynamic xlsx data ingestion (packages, dates, live CPMs, DMAs, max live impressions), client-side PowerPoint generation via JSZip, and SharePoint REST API sync for centralized asset distribution",
-          "Features include a multi-property package builder with real-time CPM calculation, rate-class toggling, max-impression enforcement against live inventory caps, embedded base64 master template for branded PPTX deck generation, bulk template upload via the browser File System Access API, and one-click export to .pptx",
+          "Designed and built a web app that calculates streaming ad packages for live sports, enabling 50+ reps across 10+ properties to configure rate-class, DMA, flight dates, and budgets to create branded proposal decks",
+          "Architecture: zero-dependency single-file HTML app (no build step, no server) with SheetJS and JSZip bundled inline; dataset and PPTX templates embedded as JavaScript constants for fully client-side proposal generation",
+          "Features include a multi-property package builder with real-time CPM calculation, rate-class toggling, max-imps enforcement against live inventory caps, an embedded base64 master template for branded PPTX deck generation, and a self-rewriting “Save Updated File” flow that regenerates the HTML with refreshed embedded data for distribution",
         ]}
       />
       <Project
@@ -113,7 +113,7 @@ function ProductPortfolio() {
         bullets={[
           "Designed and built a Next.js web application that consolidates booked spots, schedules, and inventory data into a unified decision-support layer used daily by yield, sales, and revenue assurance teams to manage allocation across $57MM in annual ad revenue for the Lakers and Dodgers RSNs",
           "Architecture: Next.js single-page application with a server-driven data layer feeding a six-view product framework — Inventory, Rates, Heatmap, Booking Matrix, Yield Summary, and About — covering every angle of yield decisioning from per-game capacity to portfolio-level revenue decomposition",
-          "Features include a per-game inventory view with capacity, units sold, avails, sellout, and net revenue by date, matchup, and inventory type; a weekly rate explorer of open avails and current resolved rates; a per-game sellout heatmap; a top-advertiser × dates booking matrix of EQ30 by spot status; and a line-of-business × spot-group yield summary with EUR (Net), AUR, and sellout per game",
+          "Features include a per-game inventory view with capacity, avails, sellout, and net revenue by date, matchup, and inventory type; a weekly rate card of open avails and dynamic rates; a per-game sellout heatmap; a client x date booking matrix of EQ30 by spot status; and a LOB-group yield summary with EUR (Net), AUR, and sellout per game",
         ]}
       />
     </Section>
