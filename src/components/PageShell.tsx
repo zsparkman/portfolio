@@ -33,19 +33,19 @@ export function PageShell({
           Santa Monica, CA
           <Sep />
           <a
-            href="mailto:zesparkman@gmail.com"
-            className="text-slate-600 hover:text-[#1F3A5F]"
-            onClick={() => posthog.capture("email_clicked")}
-          >
-            zesparkman@gmail.com
-          </a>
-          <Sep />
-          <a
             href="tel:+13104963376"
             className="text-slate-600 hover:text-[#1F3A5F]"
             onClick={() => posthog.capture("phone_clicked")}
           >
             (310) 496-3376
+          </a>
+          <Sep />
+          <a
+            href="mailto:zesparkman@gmail.com"
+            className="text-slate-600 hover:text-[#1F3A5F]"
+            onClick={() => posthog.capture("email_clicked")}
+          >
+            zesparkman@gmail.com
           </a>
           <Sep />
           ZachSparkman.com

@@ -40,8 +40,8 @@ function Summary() {
         Independently designs and ships web-based data products that solve
         real business problems, from internal sales tools to public-facing
         advertising intelligence platforms. Domain expertise in FreeWheel,
-        programmatic activation, addressable advertising, FCC compliance, and
-        live sports ad monetization.
+        Salesforce, addressable advertising, FCC compliance, and live sports
+        ad monetization.
       </p>
     </Section>
   );
@@ -79,10 +79,10 @@ function ProfessionalExperience() {
         company="Spectrum Reach"
         dates="March 2025 – Present"
         bullets={[
-          "Own end-to-end yield strategy, pricing, and inventory management across $190MM in combined annual ad revenue spanning Lakers & Dodgers RSNs, LA & Dallas Interconnects (streaming, CTV, and linear), leading a two-person yield team across LA and Dallas markets",
-          "Define rate card frameworks, dynamic floor pricing, and yield optimization rules across FreeWheel and Wide Orbit, partnering with Ad Ops, Engineering, and national sales leadership to set KPIs (fill rate, sell-through, eCPM, makegood liability) and prioritize inventory initiatives across programmatic CTV and linear scheduling",
-          "Shipped the Live Sports CTV Package Builder, an internal sales tool used by 50+ reps across 10+ properties that automates streaming ad package configuration and proposal generation, eliminating a lengthy manual process (see Product Portfolio)",
-          "Manage FCC political broadcasting compliance across $34MM+ in on-cycle political revenue, including LUR thresholds, equal access obligations, and inventory allocation across federal and state election windows",
+          "Lead end-to-end yield strategy, pricing architecture, and ad inventory management partnering with the LA & Dallas national sales teams across streaming, CTV, and linear TV — overseeing $190MM in combined annual ad revenue across owned-and-operated inventory (LA & Dallas Interconnects, Lakers and Dodgers RSNs, Spectrum TV app, VOD) plus acquired inventory partnerships. Manage two direct reports across LA and Dallas markets",
+          "Define rate card frameworks, dynamic floor pricing, and yield optimization rules across FreeWheel, Operative AOS and Wide Orbit; own deal-desk approval governance over order activation pipeline in Salesforce and ShowSeeker Pilot, with team members executing day-to-day clearance against pricing and inventory rules; partner with Ad Ops, Engineering, and national sales leadership to set KPIs (fill rate, sell-through, eCPM, makegood liability) across CTV and linear scheduling",
+          "Drive yield optimization across acquired inventory spanning MVPD affiliate inventory, FAST/DTC app partnerships, FreeWheel Marketplace, and DSP supply, extending reach and diversifying revenue across MVPD, addressable, and programmatic channels",
+          "Manage FCC political broadcasting compliance across $34MM in on-cycle political ad revenue, Lowest Unit Rate (LUR) thresholds, equal access obligations, candidate offer management, and political inventory allocation across federal and state election windows",
         ]}
       />
       <Job
@@ -90,7 +90,7 @@ function ProfessionalExperience() {
         company="Spectrum Reach"
         dates="January 2020 – February 2025"
         bullets={[
-          "Architected pricing and inventory segmentation strategy for live sports streaming and CTV ad pods in partnership with Sales, Ad Ops, and Product, delivering +74% CPM growth in premium live in-game inventory while pioneering addressable, programmatic, and DAI activation across connected devices",
+          "Designed and implemented pricing and inventory segmentation strategy for live sports streaming and CTV ad pods in partnership with Sales, Ad Ops, and Product, delivering +74% CPM growth in premium live in-game inventory; supported the cutover to full DAI across both RSNs, enabling addressable monetization on connected devices",
           "Operated as deal desk for Sales, reviewing and approving proposals, clearing inventory with Ad Ops as primary Sales/Ops liaison",
           "Designed and shipped a multi-property analytics and inventory platform for both RSNs, built on a 10-view product framework over a Power Query data pipeline used daily by yield, sales, and revenue assurance to manage $57MM in annual ad revenue",
           "Helped design bottom-up RSN revenue planning model that replaced flat top-down budget targets with a unit-economics framework, deriving revenue capacity from game count, inventory volume per game, impression delivery, ratings, and monetized CPM; informs annual budget and forecast cycles for both RSNs",
@@ -101,8 +101,8 @@ function ProfessionalExperience() {
         company="Nexstar Media Group"
         dates="February 2017 – January 2020"
         bullets={[
-          "Identified a gap in Fox NFL ad packaging, redesigned the DMA-level pricing and inventory bundling strategy, and launched a revised package that delivered +78% growth in average order value",
           "Managed a 100+ account portfolio spanning national brands (Nissan, Mercedes-Benz, Ford, Subway, McDonald’s) and agency relationships with Initiative/IPG, OMD, PHD, Carat, and Litha/Media Access Group, developing integrated cross-platform proposals across digital, OTT, and linear inventory",
+          "Identified a gap in Fox NFL ad packaging, redesigned the DMA-level pricing and inventory bundling strategy, and launched a revised package that delivered +78% growth in average order value",
           "Built pricing strategy frameworks for premium sports and local programming inventory, establishing rate card structures and sell-through optimization practices that informed early programmatic and CTV monetization strategies",
         ]}
       />
@@ -112,8 +112,8 @@ function ProfessionalExperience() {
         dates="July 2015 – February 2017"
         bullets={[
           "Launched the station group’s first digital advertising division from the ground up — defined go-to-market strategy, built pricing models, and established sales operations across 3 DMAs, functioning as a 0-to-1 product owner for a new revenue line",
-          "Generated $200K+ in new digital revenue within 6 months by pioneering video pre-roll and display ad monetization on station O&O properties alongside SEM, SEO, and social media services for clients ranging from SMB to a Major Tier III Auto Dealership Group in the Pacific Northwest region",
-          "Partnered with linear sales teams across 5 broadcast stations to develop integrated cross-platform advertising solutions, bridging $7MM in traditional broadcast spot business with emerging digital inventory in an early cross-platform monetization model maximizing net revenue across owned, repped and white labeled/third party inventory",
+          "Generated $200K+ in new digital revenue within 6 months by pioneering video pre-roll and display ad monetization on station O&O properties alongside SEM, SEO, and social media services",
+          "Partnered with linear sales teams across 5 broadcast stations to develop integrated cross-platform advertising solutions, bridging $7MM in traditional broadcast spot business with emerging digital inventory in an early cross-platform monetization model",
         ]}
       />
     </Section>
@@ -169,7 +169,7 @@ function Skills() {
       <ul className="list-outside list-disc space-y-1 pl-5 marker:text-slate-400">
         <SkillRow
           category="Ad Tech & Platforms"
-          body="FreeWheel MRM, Wide Orbit (Traffic & Media Sales), Google Ad Manager, Operative AOS, programmatic SSP/DSP ecosystems, Hudson MX"
+          body="FreeWheel MRM, Wide Orbit (Traffic & Media Sales), Google Ad Manager, Operative AOS, programmatic SSP/DSP ecosystems, Hudson MX, Mediaocean Prisma for Sellers"
         />
         <SkillRow
           category="Data & Analytics"
@@ -181,11 +181,11 @@ function Skills() {
         />
         <SkillRow
           category="AI Development Tools"
-          body="Claude (API, Claude Code, claude.ai), OpenAI (Codex, ChatGPT), LM Studio for local LLM inference, LangChain for agent workflows, Apple Vision (pyobjc) for on-device OCR; integrate AI into production data pipelines and ship features end-to-end with AI-assisted development"
+          body="Claude (API, Claude Code), OpenAI (Codex, ChatGPT), LM Studio for local LLM inference, LangChain, Apple Vision (pyobjc) for on-device OCR; integrate AI into production data pipelines and ship features end-to-end with AI-assisted development"
         />
         <SkillRow
           category="Domain Expertise"
-          body="CTV/OTT ad monetization, live sports inventory strategy, ad pod optimization, addressable advertising, FCC regulatory compliance, cross-platform yield management, programmatic supply-side strategy, inventory governance & rate card design, revenue planning & unit-economics modeling"
+          body="CTV/OTT ad monetization, live sports inventory strategy, addressable advertising, FCC regulatory compliance, programmatic supply-side strategy, rate card design, unit-economics modeling"
         />
         <SkillRow
           category="Languages"
