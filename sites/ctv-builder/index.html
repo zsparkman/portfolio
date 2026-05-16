@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <title>Live Sports CTV Builder v1.0.0</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
 <style>
 /* -------------------------------------------
@@ -888,15 +889,21 @@ details summary:hover { color: var(--glow-bright); }
 
 .site-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   border-top: 1px solid var(--glow-line);
   padding: 18px 0;
   margin-top: 48px;
   font-size: 12px;
   color: var(--text-dim);
+}
+@media (min-width: 768px) {
+  .site-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .site-footer a {
   color: var(--accent);
@@ -2714,7 +2721,7 @@ document.addEventListener('DOMContentLoaded', init);
 </script>
 
 <footer class="site-footer">
-  <span>Sample data shown · Personal portfolio demo · Not affiliated with Spectrum Reach</span>
+  <span>Sample data shown — for demonstration purposes only.</span>
   <a href="https://zachsparkman.com" target="_blank" rel="noopener">Built by Zach Sparkman</a>
 </footer>
 

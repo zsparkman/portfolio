@@ -80,7 +80,7 @@ function ProductPortfolio() {
       <Project
         name="Political Window"
         tag="Sole Founder & Developer"
-        link={{ label: "PoliticalWindow.com", href: "https://politicalwindow.com" }}
+        link={{ label: "View Project↗", href: "https://politicalwindow.com" }}
         subtitle="Political advertising intelligence platform"
         bullets={[
           "Designed and built a full-stack web application that parses FCC public file PDFs into structured data, enabling political media buyers to identify LUR violations, track candidate ad spend, and navigate FCC compliance windows across all 210 U.S. DMAs",
@@ -92,7 +92,7 @@ function ProductPortfolio() {
         name="Live Sports CTV Package Platform"
         tag="Solo Build @ Spectrum Reach"
         link={{
-          label: "CTV-Builder.ZachSparkman.com",
+          label: "View Project↗",
           href: "https://ctv-builder.zachsparkman.com",
         }}
         subtitle="Sales enablement product for streaming ad packages"
@@ -106,7 +106,7 @@ function ProductPortfolio() {
         name="RSN Yield Platform"
         tag="Solo Build @ Spectrum Reach"
         link={{
-          label: "RSN-Yield.ZachSparkman.com",
+          label: "View Project↗",
           href: "https://rsn-yield.zachsparkman.com",
         }}
         subtitle="Inventory, rate, and yield management platform for live sports RSNs"
