@@ -48,7 +48,15 @@ export function PageShell({
             zesparkman@gmail.com
           </a>
           <Sep />
-          ZachSparkman.com
+          <a
+            href="https://github.com/zsparkman"
+            className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => posthog.capture("github_clicked")}
+          >
+            github.com/zsparkman
+          </a>
           <Sep />
           <a
             href="https://linkedin.com/in/zsparkman"
